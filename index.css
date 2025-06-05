@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sigmar&display=swap');
+:root{
+    --theme-color: hsl(224, 100%, 55%);
+    --Big : 2rem;
+    --small: 1rem;
+    --accept: rgb(7, 175, 7);
+    --decline: rgb(190, 12, 12);
+}
+*{
+    font-family: 'poppins', sans-serif;
+}
+body{
+background-color: hsl(0, 0%, 10%);
+z-index: 0;
+color: white;
+
+}
+header{
+    height: 40%;
+    width: 101%;
+}
+
+.head{
+    background-color: var(--theme-color);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 15vh;
+    width: 100%;
+    border-radius: 0px;
+    padding: 20px;
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    box-shadow: 0 2px 5px black;
+    align-items: center;
+    
+    
+}
+.head h1{
+    z-index: 6;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 30%;
+    font-style: italic;
+    font-size: var(--Big);
+}
+.description{
+    z-index: 6;
+    width: 300px;
+    height: 50px;
+    text-align: left;
+    position: absolute;
+    left: 65%;
+    bottom: 47px;
+    font-size: 1.2rem;
+    margin: 10px;
+    font-weight: 300;
+    font-size: var(--small);
+}
+.-after-1,
+.-after-2,
+.-after-3,
+.-after-4,
+.-after-5,
+.-after-6,
+.-after-7,
+.-after-8,
+.-after-9,
+.-after-10{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    background-color:hsl(224, 100%, 65%) ;
+    opacity: 0.8;
+    border-radius: 50%;
+}
+.-after-1{
+    top:80%;
+    left: 1%;
+    animation: moveBubbles 12s 100ms linear infinite ;
+}
+.-after-2{
+    top:78%;
+    left: 10%;
+    animation: moveBubbles 19s 100ms linear infinite ;
+}
+.-after-3{
+    top:80%;
+    left: 20%;
+    animation: moveBubbles 34s 100ms linear infinite ;
+}
+.-after-4{
+    top:60%;
+    left: 30%;
+    animation: moveBubbles 7s 100ms linear infinite ;
+}
+.-after-5{
+    top:76%;
+    left: 70%;
+    animation: moveBubbles 24s 100ms linear infinite ;
+}
+.-after-6{
+    top: 65%;
+    left: 90%;
+    animation: moveBubbles 13s 100ms linear infinite ;
+}
+.-after-7{
+    top: 60%;
+    left: 80%;
+    animation: moveBubbles 8s 100ms linear infinite ;
+}
+.-after-8{
+    top:40%;
+    right: 55%;
+    animation: moveBubbles 11s 100ms linear infinite ;
+}
+.-after-9{
+    top: 20%;
+    right: 10%;
+    animation: moveBubbles 10s 100ms linear infinite ;
+}
+.-after-10{
+    top: 10%;
+    right: 5%;
+    animation: moveBubbles 18s 100ms linear infinite ;
+}   
+@keyframes moveBubbles{
+    0%{
+        transform: translateY(350%);
+    }
+    100%{
+        transform: translateY(-1000%);
+    }
+}
+.Sett_secs{
+    padding: 10px;
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+    margin: 10px 20px;
+    font-size: var(--small);
+}
+input[type = "checkbox"]{
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--theme-color);
+    border-radius: 6px;
+    background: #222;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.2s;
+    outline: none;
+}   
+
+input[type="checkbox"]:checked {
+    background: var(--accept);
+    border-color: var(--accept);
+}
+
+
+input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    left: 4px;
+    top: 3px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+
+}
+
+footer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 90vh;
+}
+input[type ="file"]{
+    background-color: var(--theme-color);
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+input[type="text"]{
+    outline: none;
+    border-radius: 5px;
+    border: none;
+}
